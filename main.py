@@ -43,9 +43,7 @@ class Application(Frame):
 
     def confirm_button(self):
         temp_dict = {"url": self.ent02.get(), "quality": self.get_quality(self.cbx01.get())}
-        # print(self.cbx01.get())
         self.video_list.append(temp_dict)
-        # print(self.video_list)
         self.tree.insert("", 0, values=(self.num + 1, self.name_spider(temp_dict["url"]), self.cbx01.get()))
         self.window.destroy()
 
@@ -75,10 +73,8 @@ class Application(Frame):
 
     def create_widget(self):
         global add_video
-        add_video = PhotoImage(file=r"D:\BiliDownloader\v1.2.3\venv\Lib\img\add_video.gif")
         self.btn01 = Button(self, text="添加视频", command=self.download_window)  # 添加视频按钮
         self.btn01.grid(column=0, row=0, sticky="w")
-        download_video = PhotoImage(file=r"D:\BiliDownloader\v1.2.3\venv\Lib\img\start_downloading.gif")
         self.btn03 = Button(self, text="开始下载", command=self.start_downloading)
         self.btn03.grid(column=1, row=0, sticky="w")
         self.lbl01 = Label(self, text="保存地址:")

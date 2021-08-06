@@ -1,0 +1,1 @@
+ pyinstaller -F main.py --hidden-import=you_get.extractors --hidden-import=you_get.cli_wrapper --hidden-import=you_get.processor --hidden-import=you_get.util -p D:\BiliDownloader\venv\Lib\site-packages --icon=D:\BiliDownloader\venv\Lib\img\02.ico
